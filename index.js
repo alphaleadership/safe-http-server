@@ -75,7 +75,7 @@ module.exports = class SafeHttpServer {
         } else {
             this.requestMap.set(clientIP, { requestCount: 1, lastRequestTime: currentTime });
         }
-        this.app(req, res)
+        return this.app(req, res)
     }
 
     listen() {
