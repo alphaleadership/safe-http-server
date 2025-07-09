@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/alphaleadership/safe-http-server/issues"
   },
-  "homepage": "https://github.com/alphaleadership/safe-http-server#readme"
+  "homepage": "https://github.com/alphaleadership/safe-http-server#readme",
+  "dependencies": {
+    "static-blocklist": "^1.0.0"
+  }
 }
