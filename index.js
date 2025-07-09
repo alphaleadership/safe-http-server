@@ -2,7 +2,7 @@ const http = require("node:http")
 const fs = require("node:fs")
 const path = require("node:path")
 const StaticBlockList = require("./static-blocklist")
-const blocke=[]
+const blocke=fs.readFileSync(path.join(__dirname, "url.txt"), "utf8").split("\n")
 module.exports = class SafeHttpServer {
     constructor(port, blocklistPath, app, { expiryTime = 60000, timeLimit = 60000, requestLimit = 100, blockedEndpoints = [] } = {}) {
         this.expiryTime = expiryTime;
@@ -31,7 +31,7 @@ module.exports = class SafeHttpServer {
     handleRequest(req, res) {
         const clientIP = req.socket.remoteAddress;
 
-        if (this.blockedEndpoints.includes(req.url)) {
+        if (this.blockedEndpoints.some(endpoint => req.url.includes(endpoint))) {
             this.blocklist.add(clientIP, req.socket.family);
             this.save();
             res.writeHead(403, { "Content-Type": "text/plain" });

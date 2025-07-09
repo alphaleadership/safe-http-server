@@ -1,0 +1,11 @@
+/xmlrpc.php
+/wp-login.php
+/wp-admin
+/.env
+/config.json
+/soap/
+/actuator/gateway/routes
+/.git/config
+/.git/HEAD
+/.svn/entries
+/.DS_Store
