@@ -1,5 +1,5 @@
 {
-  "name": "safe-http-server",
+  "name": "safe-blocklist-http-server",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
