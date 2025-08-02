@@ -78,3 +78,4 @@ Stops the HTTP server and clears the cleanup interval.
 ### `save()`
 
 Saves the current blocklist to the file.
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=alphaleadership/temp@github)](https://gitads.dev/v1/ad-track?source=alphaleadership/temp@github)
