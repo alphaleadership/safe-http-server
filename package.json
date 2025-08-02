@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/alphaleadership/safe-http-server#readme",
   "dependencies": {
-    "static-blocklist": "^1.0.0"
+    "static-blocklist": "^1.0.1"
   }
 }
